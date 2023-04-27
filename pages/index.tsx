@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Author, testAuthor } from '../components/author';
-
+import { PostList } from '../components/post-list-item';
+import { Accordion } from '../components/accordion-panel';
 export default function Home() {
 
 
@@ -36,7 +37,7 @@ export default function Home() {
       </div>
 
       <div className={styles.firstTitle}>
-        <h1>Trending</h1>
+        <h1>Trending</h1> 
       </div>
       <div className={styles.firstCarousel}>
         <div className={styles.accordion}>
@@ -185,90 +186,12 @@ export default function Home() {
         </div> */}
       </div>
       <div className={styles.firstContent}>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
       </div>
 
       <div className={styles.secondTitle}>
@@ -299,90 +222,12 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.firstContent}>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
-        <div className={styles.firstContentBox}>
-          <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
-          <div className={styles.firstContentBoxCategory}>
-            <div className={styles.firstContentBoxCategoryBlog}>
-              <p>Business, Travel</p>
-            </div>
-            <div className={styles.firstContentBoxCategoryDate}>
-              <p>- May 28,2021</p>
-            </div>
-          </div>
-          <h2>Your most unhappy customers are your greatest source of learning.</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <Author {...testAuthor} />
-        </div>
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
       </div>
 
       <div className={styles.subscribe}>

@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/accordion-paneltsx"  ],
   "exclude": [
     "node_modules"
   ]

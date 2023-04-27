@@ -17,6 +17,7 @@ export const testPost: PostListItem = {
     date: new Date(),
     picture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.emag.ro%2Famintiri-din-copilarie-ion-creanga-9786067870018%2Fpd%2FDLJLJBBBM%2F&psig=AOvVaw0QZ3X5Q4Z3Q4Q8QX6Q2Q8o&ust=1622466145653000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjQ4ZqH4_ACFQAAAAAdAAAAABAD",
     description: "Amintiri din copilarie este o opera literara scrisa de Ion Creanga",
+
 }
 
 export const testPosts: PostListItem[] = [
@@ -110,19 +111,22 @@ export const testPosts: PostListItem[] = [
     },
 ];
 
+
 export function PostList(props: PostListItem) {
     return (
         <div className={styles.firstContentBox}>
-        <img src="https://preview.colorlib.com/theme/magdesign/images/img_2.jpg" alt="" />
+        <img src="" alt="" />
         <div className={styles.firstContentBoxCategory}>
           <div className={styles.firstContentBoxCategoryBlog}>
-            <p>{testPost.category}</p>
+            <p>{...testPosts.map(
+              (post) => post.category
+            )}</p>
           </div>
           <div className={styles.firstContentBoxCategoryDate}>
-            <p>-{testPost.date.toLocaleDateString()}</p>
+            <p>-{}</p>
           </div>
         </div>
-        <h2>Your most unhappy customers are your greatest source of learning.</h2>
+        <h2>{}</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         <Author {...testAuthor} />
       </div>
