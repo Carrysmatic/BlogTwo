@@ -293,7 +293,7 @@ color: #999; - Date color
 }
 
 .accordionIcon {
-  fill: var(--_panel-color);
+  stroke: var(--_panel-color);
   background: hsl(0, 0%, 0% / 0.55);
   width: var(--_button-size);
   aspect-ratio: 1 / 1;
