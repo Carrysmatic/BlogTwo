@@ -112,15 +112,16 @@ export const testPosts: PostListItem[] = [
 ];
 
 
+
 export function PostList(props: PostListItem) {
     return (
         <div className={styles.firstContentBox}>
         <img src="" alt="" />
         <div className={styles.firstContentBoxCategory}>
           <div className={styles.firstContentBoxCategoryBlog}>
-            <p>{...testPosts.map(
-              (post) => post.category
-            )}</p>
+          {testPosts.map((post) => (
+            <PostList {...post} />
+          ))}
           </div>
           <div className={styles.firstContentBoxCategoryDate}>
             <p>-{}</p>

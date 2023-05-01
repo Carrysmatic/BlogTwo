@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Author, testAuthor } from '../components/author';
-import { PostList } from '../components/post-list-item';
-import { Accordion } from '../components/accordion-panel';
+import { PostList, testPosts } from '../components/post-list-item';
+// import { Accordion } from '../components/accordion-panel';
 export default function Home() {
 
 
@@ -186,12 +186,16 @@ export default function Home() {
         </div> */}
       </div>
       <div className={styles.firstContent}>
+        {testPosts.map((post) => (
+          <PostList author={post.author[0]} title={post.title[0]} category={post.category[0]} date={undefined} picture={post.picture[0]} description={post.description[0]} />
+        )
+        )}
+        {/* <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} /> */}
       </div>
 
       <div className={styles.secondTitle}>
