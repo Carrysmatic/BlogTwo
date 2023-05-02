@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Author, testAuthor } from '../components/author';
-import { PostList, testPosts } from '../components/post-list-item';
-// import { Accordion } from '../components/accordion-panel';
+import { Post, testPosts } from '../components/post-list-item';
+import { Accordion, testPanels } from '../components/accordion-panel';
+import { PostDetails } from '../components/acp-posts';
+
 export default function Home() {
 
 
@@ -40,6 +42,7 @@ export default function Home() {
         <h1>Trending</h1> 
       </div>
       <div className={styles.firstCarousel}>
+        <Accordion title="Boating" items={testPanels} />
         <div className={styles.accordion}>
           <div className={styles.accordionPanel}>
             <h2 id='panel1-title' >
@@ -186,16 +189,12 @@ export default function Home() {
         </div> */}
       </div>
       <div className={styles.firstContent}>
-        {testPosts.map((post) => (
-          <PostList author={post.author[0]} title={post.title[0]} category={post.category[0]} date={undefined} picture={post.picture[0]} description={post.description[0]} />
-        )
-        )}
-        {/* <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} /> */}
+     {testPosts.slice(0,6).map((article) => {
+      console.log(article)
+      return <Post post={article} />
+     })}
+     <PostDetails start={0} finish={3} list={testPosts} />
+{/* transforma mapul de mai sus in componenta care sa aibe start,finish, array(moving parts) */}
       </div>
 
       <div className={styles.secondTitle}>
@@ -226,12 +225,12 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.firstContent}>
+        {/* <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
         <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
-        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} />
+        <PostList author={''} title={''} category={''} date={undefined} picture={''} description={''} /> */}
       </div>
 
       <div className={styles.subscribe}>
