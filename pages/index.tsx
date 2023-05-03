@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Author, testAuthor } from '../components/author';
 import { Post, testPosts } from '../components/post-list-item';
-import { Accordion, testPanels } from '../components/accordion-panel';
+import { Accordion, testPanels } from '../components/ap';
 import { PostDetails } from '../components/acp-posts';
 
 export default function Home() {
@@ -193,7 +193,7 @@ export default function Home() {
       console.log(article)
       return <Post post={article} />
      })}
-     <PostDetails start={0} finish={3} list={testPosts} />
+     {/* <PostDetails start={0} finish={3} list={testPosts} /> */}
 {/* transforma mapul de mai sus in componenta care sa aibe start,finish, array(moving parts) */}
       </div>
 

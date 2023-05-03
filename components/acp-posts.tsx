@@ -11,13 +11,6 @@ interface ListItems {
 
 }
 
-export const testList:PostList[] = {
-   { start:0,
-    finish:3,
-    list:[
-
-    ]}
-}
 
 
 export function PostDetails (props:PostList) {

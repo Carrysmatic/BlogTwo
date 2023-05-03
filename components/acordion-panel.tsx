@@ -2,6 +2,39 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 
+export const testPanels: PanelComponentData[] = [
+    {
+        title: 'Panel 1',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
+        image: 'https://via.placeholder.com/150',
+        imageDescription:'asd'
+    },
+    {
+        title: 'Panel 2',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.2',
+        image: 'https://via.placeholder.com/150',
+        imageDescription:'asd'
+    },
+    {
+        title: 'Panel 3',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.3',
+        image: 'https://via.placeholder.com/150',
+        imageDescription:'asd'
+    },
+    {
+        title: 'Panel 4',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.4',
+        image: 'https://via.placeholder.com/150',
+        imageDescription:'asd'
+    },
+    {
+        title: 'Panel 5',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.5',
+        image: 'https://via.placeholder.com/150',
+        imageDescription:'asd'
+    }
+    
+]
 
 
 
@@ -17,36 +50,6 @@ interface PanelData {
     active: boolean;
     onClick: () => void;
 }
-
-export const testPanels: PanelData[] = [
-    {
-        title: 'Panel 1',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.',
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        title: 'Panel 2',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.2',
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        title: 'Panel 3',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.3',
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        title: 'Panel 4',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.4',
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        title: 'Panel 5',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.5',
-        image: 'https://via.placeholder.com/150',
-    }
-    
-]
-
 
 function PanelItem(props:PanelData) {
 
@@ -80,19 +83,19 @@ function PanelItem(props:PanelData) {
 
 interface AccordionData {
     content: string;
-    items: PanelComponentData[];
+    items: PanelData[];
 }
 
 export function Accordion(props:AccordionData) {
 
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(false);
 
     return (
         <div className={styles.firstCarousel}>
             {props.items.map(
                 (active, index) => {
                     return (
-                        <PanelData
+                        <PanelItem
                             key={index}
                             panel={panel}
                             onClick={() => {
